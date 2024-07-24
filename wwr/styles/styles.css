@@ -1,0 +1,94 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Define CSS Variables for the color scheme */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around; /* Evenly space the navigation links */
+    align-items: center; /* Center the links vertically */
+    background-color: #333; /* Adjust background color as needed */
+    padding: 1rem; /* Adjust padding as needed */
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    color: #fff; /* Adjust text color as needed */
+    text-decoration: none; /* Remove underline */
+}
+
+nav a:hover {
+    background-color: #575757; /* Add hover effect */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Adjust column widths as needed */
+    gap: 1rem; /* Optional: add gap between columns */
+}
+
+aside {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+main {
+    grid-column: 2 / 3;
+}
+
+h1 {
+    border-bottom: 2px solid var(--primary-color); /* Adjust color and width as needed */
+    padding-bottom: 0.5rem; /* Optional: add padding for spacing */
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    margin: 0 1rem;
+}
+
+footer a img {
+    width: 24px;
+    height: 24px;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* Other existing CSS rules */

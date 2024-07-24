@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+<body>
+    <h1>HTML & CSS Quiz</h1>
+    <form action="#" method="post">
+        <!-- Question 1: Text input -->
+        <div class="form-group">
+            <label for="q1">1. What does HTML stand for?</label>
+            <input type="text" id="q1" name="q1">
+        </div>
+
+        <!-- Question 2: Textarea -->
+        <div class="form-group">
+            <label for="q2">2. Explain the use of CSS in web development.</label>
+            <textarea id="q2" name="q2" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Question 3: Select -->
+        <div class="form-group">
+            <label for="q3">3. Choose the correct HTML element for the largest heading:</label>
+            <select id="q3" name="q3">
+                <option value="" selected disabled>Choose One ...</option>
+                <option value="h1">&lt;h1&gt;</option>
+                <option value="h2">&lt;h2&gt;</option>
+                <option value="h3">&lt;h3&gt;</option>
+            </select>
+        </div>
+
+        <!-- Question 4: Number input -->
+        <div class="form-group">
+            <label for="q4">4. How many HTML heading elements are there?</label>
+            <input type="number" id="q4" name="q4" min="1" max="10">
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-group">
+            <button type="submit">Submit Quiz</button>
+        </div>
+    </form>
+</body>
+</html>
+
