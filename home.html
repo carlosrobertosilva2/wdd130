@@ -14,7 +14,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: 
         linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)),
-        url('images/rafting-bg-optimized.jpg') center/cover fixed;
+        url('images/rivet1.jpg') center/cover fixed;
       position: relative;
       min-height: 100vh;
     }
@@ -27,7 +27,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      border: 15px solid #3498db;
+      border: 15px solid #8B4513; /* Dark brown */
       pointer-events: none;
       z-index: 1000;
       box-sizing: border-box;
@@ -40,7 +40,7 @@
       left: 10px;
       right: 10px;
       bottom: 10px;
-      border: 5px solid rgba(52, 152, 219, 0.3);
+      border: 5px solid rgba(139, 69, 19, 0.3); /* Dark brown with transparency */
       pointer-events: none;
       z-index: 1000;
       box-sizing: border-box;
@@ -48,7 +48,7 @@
 
     /* PAGE CONTENT STYLES */
     header {
-      background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 152, 219, 0.9) 100%);
+      background: linear-gradient(135deg, rgba(101, 67, 33, 0.9) 0%, rgba(160, 82, 45, 0.9) 100%); /* Brown tones */
       padding: 1.5rem;
       position: relative;
       z-index: 100;
@@ -66,9 +66,19 @@
 
     nav {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
     }
 
     nav a {
@@ -86,6 +96,11 @@
 
     nav a.active {
       background-color: rgba(255,255,255,0.3);
+    }
+
+    .social-icons a {
+      font-size: 1.2rem;
+      padding: 0.5rem;
     }
 
     main {
@@ -107,7 +122,7 @@
     }
 
     .page-header h1 {
-      color: #2c3e50;
+      color: #5a3921; /* Dark brown */
       font-size: 2.5rem;
       margin-top: 0;
     }
@@ -134,7 +149,7 @@
     }
 
     .trips-table th {
-      background-color: #3498db;
+      background-color: #A0522D; /* Sienna brown */
       color: white;
     }
 
@@ -143,7 +158,7 @@
     }
 
     .trips-table tr:hover {
-      background-color: #e6f2ff;
+      background-color: #f5e6d8; /* Light brown */
     }
 
     /* TRIP CARDS */
@@ -160,6 +175,7 @@
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
+      border: 1px solid #d2b48c; /* Tan border */
     }
 
     .trip-card:hover {
@@ -191,7 +207,7 @@
 
     .button {
       display: inline-block;
-      background: #3498db;
+      background: #8B4513; /* Dark brown */
       color: white;
       padding: 0.8rem 1.5rem;
       border-radius: 4px;
@@ -202,8 +218,8 @@
     }
 
     .button:hover {
-      background: #2980b9;
-      border-color: #3498db;
+      background: #A0522D; /* Sienna brown */
+      border-color: #8B4513; /* Dark brown */
     }
 
     /* EQUIPMENT SECTION */
@@ -213,6 +229,7 @@
       padding: 2rem;
       margin-bottom: 3rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border: 1px solid #d2b48c; /* Tan border */
     }
 
     .equipment-grid {
@@ -236,10 +253,11 @@
 
     /* TESTIMONIALS */
     .testimonials {
-      background-color: rgba(240,248,255,0.9);
+      background-color: rgba(245, 222, 179, 0.7); /* Wheat color with transparency */
       padding: 2rem;
       border-radius: 8px;
       margin-bottom: 3rem;
+      border: 1px solid #d2b48c; /* Tan border */
     }
 
     .testimonial-grid {
@@ -259,7 +277,7 @@
     .testimonial-author {
       font-weight: bold;
       margin-top: 1rem;
-      color: #2c3e50;
+      color: #5a3921; /* Dark brown */
     }
 
     /* RESOURCES SECTION */
@@ -279,6 +297,7 @@
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border: 1px solid #d2b48c; /* Tan border */
     }
 
     .resource-card img {
@@ -294,12 +313,12 @@
     .resource-card a {
       display: inline-block;
       margin-top: 1rem;
-      color: #3498db;
+      color: #8B4513; /* Dark brown */
       font-weight: 600;
     }
 
     footer {
-      background: rgba(44, 62, 80, 0.9);
+      background: rgba(101, 67, 33, 0.9); /* Dark brown */
       color: white;
       text-align: center;
       padding: 2rem;
@@ -326,8 +345,12 @@
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
-        align-items: center;
         gap: 1rem;
+      }
+      
+      .nav-links, .social-icons {
+        width: 100%;
+        justify-content: center;
       }
       
       .trip-grid, .equipment-grid, .testimonial-grid, .resources-grid {
@@ -347,10 +370,17 @@
       <img src="images/logo-optimized.png" alt="Silva Family Rafting Adventures Logo" width="200" height="80">
     </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="trips.html" class="active">Trips</a>
-      <a href="contact.html">Contact</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html" class="active">Trips</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </nav>
   </header>
   <main>
@@ -403,7 +433,7 @@
       <!-- Beginner Rapids -->
       <div class="trip-card">
         <div class="card-image">
-          <img src="images/beginner-trip-optimized.jpg" 
+          <img src="images/picture1.jpg" 
                alt="Group rafting on calm river with small waves" width="400" height="220">
         </div>
         <div class="card-content">
@@ -423,7 +453,7 @@
       <!-- Intermediate Challenge -->
       <div class="trip-card">
         <div class="card-image">
-          <img src="images/intermediate-trip-optimized.jpg" 
+          <img src="images/picture2.jpeg" 
                alt="Rafting through moderate rapids with active paddling" width="400" height="220">
         </div>
         <div class="card-content">
@@ -443,7 +473,7 @@
       <!-- Advanced Thrill -->
       <div class="trip-card">
         <div class="card-image">
-          <img src="images/advanced-trip-optimized.jpg" 
+          <img src="images/picture3.jpg" 
                alt="Intense whitewater rafting with big waves" width="400" height="220">
         </div>
         <div class="card-content">
@@ -468,7 +498,7 @@
       
       <div class="equipment-grid">
         <div class="equipment-item">
-          <img src="images/raft-icon-optimized.png" alt="Whitewater raft" width="60" height="60">
+          <img src="images/picture4.jpg" alt="Whitewater raft" width="60" height="60">
           <div>
             <h3>Self-Bailing Rafts</h3>
             <p>14-16 ft. professional grade rafts</p>
@@ -476,7 +506,7 @@
         </div>
         
         <div class="equipment-item">
-          <img src="images/paddle-icon-optimized.png" alt="Paddle" width="60" height="60">
+          <img src="images/picture4.jpg" alt="Paddle" width="60" height="60">
           <div>
             <h3>Carbon Fiber Paddles</h3>
             <p>Lightweight and durable</p>
@@ -484,7 +514,7 @@
         </div>
         
         <div class="equipment-item">
-          <img src="images/lifejacket-icon-optimized.png" alt="Life jacket" width="60" height="60">
+          <img src="images/picture4.jpg" alt="Life jacket" width="60" height="60">
           <div>
             <h3>Type V Life Jackets</h3>
             <p>Coast Guard approved</p>
@@ -492,7 +522,7 @@
         </div>
         
         <div class="equipment-item">
-          <img src="images/helmet-icon-optimized.png" alt="Helmet" width="60" height="60">
+          <img src="images/picture4.jpg" alt="Helmet" width="60" height="60">
           <div>
             <h3>Safety Helmets</h3>
             <p>Impact-resistant with chin straps</p>
@@ -531,7 +561,7 @@
       
       <div class="resources-grid">
         <div class="resource-card">
-          <img src="images/safety-resource-optimized.jpg" alt="Rafting safety" width="400" height="150">
+          <img src="images/picture1.jpg" alt="Rafting safety" width="400" height="150">
           <div class="resource-content">
             <h3>American Whitewater</h3>
             <p>Comprehensive resource for river conservation and rafting safety standards in the US.</p>
@@ -540,7 +570,7 @@
         </div>
         
         <div class="resource-card">
-          <img src="images/techniques-resource-optimized.jpg" alt="Rafting techniques" width="400" height="150">
+          <img src="images/picture2.jpeg" alt="Rafting techniques" width="400" height="150">
           <div class="resource-content">
             <h3>REI Rafting Guide</h3>
             <p>Expert advice on gear, techniques, and planning your rafting adventure.</p>
@@ -549,7 +579,7 @@
         </div>
         
         <div class="resource-card">
-          <img src="images/international-resource-optimized.jpg" alt="International rafting" width="400" height="150">
+          <img src="images/picture3.jpg" alt="International rafting" width="400" height="150">
           <div class="resource-content">
             <h3>International Rafting Federation</h3>
             <p>The official global organization for rafting sports and international safety standards.</p>
