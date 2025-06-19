@@ -10,28 +10,42 @@
     body {
       margin: 0;
       padding: 0;
-      border: 15px solid #add8e6; /* Light blue border */
-      min-height: 100vh; /* Ensures border goes around entire page */
-      box-sizing: border-box; /* Includes border in element's total dimensions */
+      border: 15px solid #add8e6;
+      min-height: 100vh;
+      box-sizing: border-box;
+      text-align: center;
     }
     
     /* Center the main content */
     main {
       padding: 20px;
-      max-width: 1200px; /* Limits width for better readability */
-      margin: 0 auto; /* Centers the main content */
-      text-align: center; /* Centers text elements */
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Logo container styling */
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      background-color: #f0f8ff;
+    }
+    
+    /* Logo styling */
+    .logo {
+      max-height: 80px;
+      max-width: 100%;
     }
     
     /* Navigation styling */
     nav {
-      text-align: center; /* Centers the links horizontally */
-      padding: 20px 0; /* Adds some vertical padding */
-      background-color: #f0f8ff; /* Light blue background for nav */
+      padding: 10px 0;
+      background-color: #f0f8ff;
     }
     
     nav a {
-      margin: 0 15px; /* Adds space between links */
+      margin: 0 15px;
       text-decoration: none;
       color: #0077cc;
       font-weight: bold;
@@ -58,16 +72,15 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px;
-      justify-content: center; /* Centers the grid items */
+      justify-content: center;
     }
     
     .trip-card {
       border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
-      text-align: center;
-      max-width: 350px; /* Limits card width */
-      margin: 0 auto; /* Centers individual cards */
+      max-width: 350px;
+      margin: 0 auto;
     }
     
     .trip-card img {
@@ -79,6 +92,9 @@
 </head>
 <body>
   <header>
+    <div class="logo-container">
+      <img src="images/SilvaRaftingCompanyLogo.pgn" alt="SilvaRaftingCompanyLogo" class="logo">
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -90,19 +106,19 @@
     <h1>Our Trips</h1>
     <div class="trip-grid">
       <div class="trip-card">
-        <img src="images/trip1.jpg" alt="Beginner Rapids">
+        <img src="images/Team_builder.jpg" alt="Beginner Rapids">
         <h3>Beginner Rapids</h3>
         <p>Duration: 2 hours | Price: $50</p>
         <a href="contact.html" class="button">Book Now</a>
       </div>
       <div class="trip-card">
-        <img src="images/trip2.jpg" alt="Intermediate Challenge">
+        <img src="images/Team_builder2.jpg" alt="Intermediate Challenge">
         <h3>Intermediate Challenge</h3>
         <p>Duration: 4 hours | Price: $80</p>
         <a href="contact.html" class="button">Book Now</a>
       </div>
       <div class="trip-card">
-        <img src="images/trip3.jpg" alt="Advanced Thrill">
+        <img src="images/Team_builder3.jpg" alt="Advanced Thrill">
         <h3>Advanced Thrill</h3>
         <p>Duration: 6 hours | Price: $120</p>
         <a href="contact.html" class="button">Book Now</a>
