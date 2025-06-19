@@ -64,6 +64,11 @@
       text-decoration: none;
       border-radius: 5px;
       margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+    
+    .button:hover {
+      background-color: #005fa3;
     }
     
     /* Grid layout for trips - centered */
@@ -81,12 +86,58 @@
       overflow: hidden;
       max-width: 350px;
       margin: 0 auto;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .trip-card:hover {
+      transform: translateY(-5px);
     }
     
     .trip-card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
+    }
+    
+    .trip-info {
+      padding: 15px;
+    }
+    
+    .price {
+      color: #2ecc71;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    
+    /* Custom PayPal button styling */
+    .paypal-button {
+      display: inline-block;
+      margin-top: 10px;
+      background: #FFC439;
+      color: #111;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 1px solid #E5B337;
+      transition: all 0.3s;
+    }
+    
+    .paypal-button:hover {
+      background: #F7BB2F;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .paypal-button img {
+      height: 18px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    
+    .paypal-button span {
+      vertical-align: middle;
     }
   </style>
 </head>
@@ -105,23 +156,70 @@
   <main>
     <h1>Our Trips</h1>
     <div class="trip-grid">
+      <!-- Beginner Package -->
       <div class="trip-card">
         <img src="images/Picture1.jpeg" alt="Beginner Rapids">
-        <h3>Beginner Rapids</h3>
-        <p>Duration: 2 hours | Price: $50</p>
-        <a href="contact.html" class="button">Book Now</a>
+        <div class="trip-info">
+          <h3>Beginner Rapids</h3>
+          <p>Duration: 2 hours</p>
+          <p class="price">Price: $50 per person</p>
+          <p>Perfect for first-timers with gentle rapids and professional guides.</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="carlossilva2@hotmail.com">
+            <input type="hidden" name="item_name" value="Beginner Rapids Trip">
+            <input type="hidden" name="amount" value="50.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit" class="paypal-button">
+              <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal">
+              <span>Pay Now</span>
+            </button>
+          </form>
+        </div>
       </div>
+      
+      <!-- Intermediate Package -->
       <div class="trip-card">
         <img src="images/Picture2.jpeg" alt="Intermediate Challenge">
-        <h3>Intermediate Challenge</h3>
-        <p>Duration: 4 hours | Price: $80</p>
-        <a href="contact.html" class="button">Book Now</a>
+        <div class="trip-info">
+          <h3>Intermediate Challenge</h3>
+          <p>Duration: 4 hours</p>
+          <p class="price">Price: $80 per person</p>
+          <p>Exciting rapids for those with some rafting experience.</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="carlossilva2@hotmail.com">
+            <input type="hidden" name="item_name" value="Intermediate Challenge Trip">
+            <input type="hidden" name="amount" value="80.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit" class="paypal-button">
+              <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal">
+              <span>Pay Now</span>
+            </button>
+          </form>
+        </div>
       </div>
+      
+      <!-- Advanced Package -->
       <div class="trip-card">
         <img src="images/Picture3.jpeg" alt="Advanced Thrill">
-        <h3>Advanced Thrill</h3>
-        <p>Duration: 6 hours | Price: $120</p>
-        <a href="contact.html" class="button">Book Now</a>
+        <div class="trip-info">
+          <h3>Advanced Thrill</h3>
+          <p>Duration: 6 hours</p>
+          <p class="price">Price: $120 per person</p>
+          <p>Expert-level rapids for maximum adrenaline seekers.</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="carlossilva2@hotmail.com">
+            <input type="hidden" name="item_name" value="Advanced Thrill Trip">
+            <input type="hidden" name="amount" value="120.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit" class="paypal-button">
+              <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal">
+              <span>Pay Now</span>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </main>
